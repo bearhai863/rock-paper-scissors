@@ -2,34 +2,42 @@
 <html lang="en">
 <head>
   <title>Rock-Paper-Scissors</title>
-  <link rel="stylesheet" href="RPS.css">
+  <link rel="stylesheet" href="index.css">
 </head>
   <body>
     <p class="title">Rock Paper Scissors</p>
 
-    <button class="move-btn" onclick="
-      playGame('rock');
-    "><img src="rock-emoji.png">
+  <div class="grid-for-move">
+    <button class="move-btn js-rock">
+      <img src="rock-emoji.png">
+      <div class="tool-tips">play rock (r)</div>
     </button>
 
-    <button class="move-btn" onclick="
-      playGame('paper');
-    "><img src="paper-emoji.png">
+    <button class="move-btn js-paper">
+      <img src="paper-emoji.png">
+      <div class="tool-tips">play paper (p)</div>
     </button>
 
-    <button class="move-btn" onclick="
-      playGame('scissors');
-    "><img src="scissors-emoji.png">
+    <button class="move-btn js-scissors">
+      <img src="scissors-emoji.png">
+      <div class="tool-tips">play scissors (s)</div>
     </button>
+  </div>
 
     <p class="displayResult"></p>
     <p class="displayMove"></p>
     <p class="displayScore"></p>
 
-    <button class="reset-score" onclick="
-      reset_Score();
-    ">Reset Score</button>
+    <button class="reset-score">Reset Score</button>
 
-    <script src="RPS.js"></script>
+    <button class="js-auto-play auto-play">Auto Play (a)</button>
+
+    <p class="js-reset-confirmation hide-message">
+      Are you sure you want to reset the score ?
+      <button class="yes-confirmation-btn">Yes</button>
+      <button class="no-confirmation-btn">No</button>
+    </p>
+
+    <script src="index.js"></script>
   </body>
 </html>
